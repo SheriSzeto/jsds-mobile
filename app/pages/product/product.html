@@ -1,0 +1,25 @@
+<div ng-controller="productCtrl">
+    <div id="header">
+        <span class="usercenter"></span>
+        <span class="addr">{{currentPosition}}</span>
+        <span class="city">广州 <i class="down"></i></span>
+    </div>
+    <div id="main">
+        <ul class="list-inline projectDetail" ng-repeat="product in products">
+            <li><img ng-src="{{product.img}}" alt="项目图片" class="pImg"/></li>
+            <li>
+                <dl>
+                    <dt>{{product.name}} <span style="float:right;color:#13b7f6">({{product.account}}人选择)</span></dt>
+                    <dd>服务部位:{{product.part}}</dd>
+                    <dd class="act" ><img src="img/xian.png" alt="限" /><span>母亲节限时优惠，活动时间优惠优惠优惠</span></dd>
+                    <dd class="act"><img src="img/zhe.png" alt="折" /><i class="zhe"></i><span>母亲节限时优惠，活动时间优惠优惠优惠</span></dd>
+                    <span class="actNums">3个活动 <i class="actDown"></i></span>
+                </dl>
+                <div class="showPrice" style="color:#9d9d9d">
+                    <s>￥{{product.originprice}}</s><b><span>￥</span>{{product.newprice}}</b> / <i>{{product.period}}分钟</i><button type="button" class="btn btn-default addToCart" ng-click="addCart($event,product)">加入购物车</button>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>

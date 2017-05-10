@@ -1,0 +1,24 @@
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.list-inline {
+  margin-left: 0;
+}
+.list-inline > li {
+  padding: 0;
+}
+ul {
+  margin-bottom: 0;
+}
+label {
+  margin-bottom: 0;
+}
+.unselect {
+  display: inline-block;
+  background: url(../img/unselect.png) no-repeat left center;
+  width: 0.4rem;
+  height: 0.58rem;
+  background-size: 0.4rem 0.4rem;
+}

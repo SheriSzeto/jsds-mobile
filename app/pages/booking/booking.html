@@ -1,0 +1,44 @@
+<div id="booking">
+    <div id="headTitle">
+        <ul class="list-inline" id="head">
+            <li><a href="cart.html" class="return">返回</a></li>
+            <li>预约下单</li>
+        </ul>
+        <div class="text-center"><input type="text" id="orderTime" style="display: none"/></div>
+    </div>
+    <div class="address input-group">
+        <span class="input-group-addon">服务地址:</span>
+        <input type="text" id="addr" placeholder="请输入您的服务地址" class="form-control text-right"/>
+    </div>
+    <p style="font-size: 0.2rem">服务信息 <span style="display: inline-block;margin-left: 0.42rem;color:#898c8e">(请完善您的服务信息)</span></p>
+    <div class="userMsg">
+        <div class="input-group">
+            <span class="input-group-addon">用户姓名:</span>
+            <input type="text" id="uname" placeholder="请输入您的姓名" class="form-control text-right"/>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">用户性别:</span>
+            <label for="man" class="sexCheck">
+                <input type="radio" name="userSex" id="man" checked="checked"/>先生
+            </label>
+            <label for="woman">
+                <input type="radio" name="userSex" id="woman"/>女士
+            </label>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">用户电话:</span>
+            <input type="text" id="phone" placeholder="请输入您的手机号" class="form-control text-right"/>
+        </div>
+        <div class="input-group">
+            <input type="text" id="smscode" class="form-control" placeholder="请输入验证码"/>
+            <span class="input-group-addon"><a id="getsmscode">获取验证码</a></span>
+        </div>
+    </div>
+    <div class="read text-center">
+        <label class="sexCheck">
+            <input type="radio" checked="checked"/>
+        </label>
+        我已阅读并同意 <a href="user_xieyi.html">《静树大师用户协议》《注意事项》</a>
+    </div>
+    <button class="btn btn-default text-center">提交信息</button>
+</div>
