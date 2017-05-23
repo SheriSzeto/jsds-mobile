@@ -9,15 +9,17 @@
         ├── pageloading （如：页面切换loading）
         ...
     ├── pages // 页面路由组件
-        ├── index
-            ├── index.jade 默认路由视图
+        ├── product
+            ├── product.html 默认路由视图
             ├── product.js 默认路由控制器
-            └── index.config.js 默认视图路由配置
-        ├── blog
+            └── product.less 默认视图路由样式
+        ├── cart
         ···
     ├── assets // 静态资源
-        ├── images // 图片资源
-    ├── app.router.js // 全局模块
+        ├── img // 图片资源
+        ├── less // 样式表
+    ├── app.router.js // 全局路由配置
+    ├── app.config.js // 配置信息
     ├── index.jade // 入口视图模板
     └── index.less // 入口视图样式
 └── vendor.config.js // 依赖的库配置文件（自定义）

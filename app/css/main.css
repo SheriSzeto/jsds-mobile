@@ -1,3 +1,38 @@
+/*字体大小*/
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 413px) {
+  body {
+    font-size: 16px;
+  }
+  .amount {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 639px) {
+  body {
+    font-size: 17px;
+  }
+  .amount {
+    margin-left: 14px;
+  }
+}
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 18px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Microsoft yahei", Helvetica, Arial, sans-serif;
+}
 h4,
 h5,
 h6 {
@@ -21,6 +56,56 @@ label {
   width: 0.4rem;
   height: 0.58rem;
   background-size: 0.4rem 0.4rem;
+}
+.sexSelected {
+  background-image: url(../img/select.png);
+  color: #13b7f6;
+}
+.mainContainer {
+  margin-bottom: 1.08rem;
+}
+/**********重构mobiscroll的样式************************/
+.mbsc-mobiscroll .dwwr {
+  background-color: transparent;
+}
+.dwsc .dw-sel {
+  background: url(../img/date.png) no-repeat left center;
+  width: 40px;
+  height: 40px;
+  background-size: 50% 50%;
+  padding-left: 20px;
+}
+.dwsc:last-child .dw-sel {
+  background-image: url(../img/time.png);
+}
+.dw-bf {
+  position: relative;
+}
+.mbsc-w-p {
+  width: 150px;
+}
+.dw-i {
+  width: 80px;
+  color: #baecff;
+  font-size: 0.3rem;
+}
+.dw-li {
+  padding-left: 20px;
+}
+.mbsc-mobiscroll .dwwol {
+  border-color: #b7ebfe;
+  width: 80px;
+  margin-left: 23px;
+}
+.dw-sel .dw-i,
+.mbsc-mobiscroll .dwl {
+  color: #fff;
+  font-size: 0.3rem;
+}
+.mbsc-mobiscroll .dwl {
+  font-size: 0.22rem;
+  width: 1.6rem;
+  margin-left: 0.4rem;
 }
 #footer {
   height: 1rem;
@@ -243,127 +328,6 @@ label {
 #main .showPrice .haveAdd {
   background-color: #aeaeae;
 }
-/************booking******************/
-#booking .input-group {
-  height: 0.88rem;
-  line-height: 0.44rem;
-}
-#booking .input-group-addon {
-  border: none;
-  background-color: #fff;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-}
-#booking .form-control {
-  height: 0.88rem;
-  border: none;
-  background-color: #fff;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  font-size: 0.26rem;
-}
-#booking .input-group-addon,
-#booking input::-webkit-input-placeholder {
-  font-size: 0.26rem;
-}
-#booking .sexCheck {
-  background-image: url(../img/select.png);
-  color: #13b7f6;
-}
-#booking #headTitle {
-  height: 3.62rem;
-  background: linear-gradient(top, #13b7f6, #83ddff);
-  background: -webkit-linear-gradient(top, #13b7f6, #83ddff);
-  background: -moz-linear-gradient(top, #13b7f6, #83ddff);
-}
-#booking #headTitle #head {
-  background-color: transparent;
-  color: #fff;
-}
-#booking #headTitle .return {
-  background-image: url(../img/return-white.png);
-  color: #fff;
-}
-#booking .address {
-  background-color: #fff;
-  margin: 0.38rem 0;
-  font-size: 0.26rem;
-}
-#booking .address #serviceAddr {
-  color: #13b7f6;
-  vertical-align: middle;
-}
-#booking > p {
-  margin: 0.4rem 0 0.2rem 0;
-  padding: 0 0.26rem;
-}
-#booking .userMsg {
-  background-color: #fff;
-  border-top: 1px solid #d6dfe3;
-}
-#booking .userMsg .input-group {
-  border-bottom: 1px solid #d6dfe3;
-}
-#booking .userMsg .input-group:nth-child(2) {
-  padding: 0.2rem 0.08rem 0.2rem 0;
-}
-#booking .userMsg .input-group:nth-child(2) span {
-  padding-right: 1.6rem;
-}
-#booking .userMsg .input-group:nth-child(2) label:last-child {
-  float: right;
-}
-#booking .read {
-  font-size: 0.24rem;
-  background-color: #fff;
-  margin-top: 0.25rem;
-  height: 0.88rem;
-  line-height: 0.88rem;
-  border-top: 1px solid #d6dfe3;
-  border-bottom: 1px solid #d6dfe3;
-}
-#booking .read a {
-  color: #13b7f6;
-}
-#booking .read .sexCheck {
-  width: 0.46rem;
-}
-#booking .btn {
-  width: 6.52rem;
-  height: 0.82rem;
-  margin: 0.3rem auto;
-  display: block;
-  border: 2px solid #13b7f6;
-  background-color: transparent;
-  color: #13b7f6;
-  margin-top: 0.92rem;
-}
-#booking #getsmscode {
-  display: inline-block;
-  border: 1px solid #13b7f6;
-  color: #13b7f6;
-  border-radius: 0.1rem;
-  padding: 0.18rem 0.25rem;
-}
-#booking #smscode {
-  height: 0.98rem;
-}
-label {
-  background: url(../img/unselect-gray.png) no-repeat;
-  width: 1.44rem;
-  height: 0.46rem;
-  background-size: 0.46rem 0.46rem;
-  display: inline-block;
-  padding-left: 0.56rem;
-  padding-top: 0.06rem;
-  font-weight: normal;
-  font-size: 0.26rem;
-  text-align: center;
-  vertical-align: middle;
-}
-input[type='radio'] {
-  display: none;
-}
 /***********购物车******************/
 #myCart h4 {
   font-size: 0.3rem;
@@ -518,4 +482,338 @@ input[type='radio'] {
   background-size: 0.16rem 0.28rem;
   float: right;
   margin-top: 0.1rem;
+}
+/************booking******************/
+#booking .input-group {
+  height: 0.88rem;
+  line-height: 0.44rem;
+}
+#booking .input-group-addon {
+  border: none;
+  background-color: #fff;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+#booking .form-control {
+  height: 0.88rem;
+  border: none;
+  background-color: #fff;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  font-size: 0.26rem;
+}
+#booking .input-group-addon,
+#booking input::-webkit-input-placeholder {
+  font-size: 0.26rem;
+}
+#booking #headTitle {
+  background: linear-gradient(top, #13b7f6, #83ddff);
+  background: -webkit-linear-gradient(top, #13b7f6, #83ddff);
+  background: -moz-linear-gradient(top, #13b7f6, #83ddff);
+}
+#booking #headTitle h5 {
+  color: #fff;
+  padding: 0.2rem 0;
+}
+#booking #headTitle #head {
+  background-color: transparent;
+  color: #fff;
+}
+#booking #headTitle .return {
+  position: absolute;
+  left: 0.3rem;
+  width: 1.2rem;
+  height: 0.36rem;
+  background: url(../img/return-white.png) no-repeat;
+  background-size: contain;
+  color: #fff;
+}
+#booking .address {
+  background-color: #fff;
+  font-size: 0.26rem;
+}
+#booking .address #serviceAddr {
+  color: #13b7f6;
+  vertical-align: middle;
+}
+#booking p {
+  margin: 0.2rem 0 0.2rem 0;
+  padding: 0 0.26rem;
+}
+#booking .userMsg {
+  background-color: #fff;
+  border-top: 1px solid #d6dfe3;
+}
+#booking .userMsg .input-group {
+  border-bottom: 1px solid #d6dfe3;
+}
+#booking .userMsg .input-group:nth-child(2) {
+  padding: 0.2rem 0.08rem 0.2rem 0;
+}
+#booking .userMsg .input-group:nth-child(2) span {
+  padding-right: 1.6rem;
+}
+#booking .userMsg .input-group:nth-child(2) label:last-child {
+  float: right;
+}
+#booking .read {
+  font-size: 0.24rem;
+  background-color: #fff;
+  margin-top: 0.25rem;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  border-top: 1px solid #d6dfe3;
+  border-bottom: 1px solid #d6dfe3;
+}
+#booking .read a {
+  color: #13b7f6;
+}
+#booking .read .sexCheck {
+  width: 0.46rem;
+}
+#booking .btn {
+  width: 6.52rem;
+  height: 0.82rem;
+  margin: 0.3rem auto;
+  display: block;
+  border: 2px solid #13b7f6;
+  background-color: transparent;
+  color: #13b7f6;
+  margin-top: 0.92rem;
+}
+#booking .btn-disabled {
+  border: 2px solid #ddd;
+  color: #ddd;
+}
+#booking #getsmscode {
+  display: inline-block;
+  border: 1px solid #13b7f6;
+  color: #13b7f6;
+  border-radius: 0.1rem;
+  padding: 0.18rem 0.25rem;
+}
+#booking #smscode {
+  height: 0.98rem;
+}
+label {
+  background: url(../img/unselect-gray.png) no-repeat;
+  width: 1.44rem;
+  height: 0.46rem;
+  background-size: 0.46rem 0.46rem;
+  display: inline-block;
+  padding-left: 0.56rem;
+  padding-top: 0.06rem;
+  font-weight: normal;
+  font-size: 0.26rem;
+  text-align: center;
+  vertical-align: middle;
+}
+input[type='radio'] {
+  display: none;
+}
+/************登录查看订单************************/
+.login h4 {
+  font-size: 0.3rem;
+  background-color: #fff;
+  padding: 0.2rem 0;
+  margin: 0;
+}
+.login p {
+  height: 0.81rem;
+  background-color: #ff2d55;
+  line-height: 0.81rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+.login .input-group {
+  height: 1.2rem;
+  margin-bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #A2C4D9;
+}
+.login .input-group .btn {
+  border-color: #13b7f6;
+  color: #13b7f6;
+}
+.login .form-control {
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  height: 1.2rem;
+}
+.login .input-group-addon {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+.login #getsmscode {
+  border: 1px solid #13b7f6;
+  border-radius: 0.1rem;
+  color: #13b7f6;
+  padding: 0.18rem 0.25rem;
+}
+.login #login {
+  border-color: #13b7f6;
+  color: #13b7f6;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  height: 0.8rem;
+  line-height: 0.4rem;
+}
+.login .code-bg {
+  background: url(../img/code_bg.jpg);
+}
+#myOrder .attention {
+  margin: 0.46rem 0;
+  line-height: 0.6rem;
+  color: #848788;
+}
+/************我的订单******************/
+.orderHeader {
+  padding: 0.12rem 0;
+  border-bottom: 1px solid #f4f8f8;
+  background-color: #fff;
+}
+.orderHeader .btn {
+  width: 2.22rem;
+  margin-right: -5px;
+  border-color: #13b7f6;
+  color: #13b7f6;
+}
+.orderHeader .btn:first-child {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.orderHeader .btn:last-child {
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.orderHeader .orderActive {
+  background-color: #13b7f6;
+  color: #fff;
+}
+#myOrder h4 {
+  font-size: 0.3rem;
+  background-color: #fff;
+  padding: 0.2rem 0;
+  margin: 0;
+}
+#myOrder #orderLists .anorder {
+  height: 2.81rem;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.11rem;
+  position: relative;
+  display: flex;
+}
+#myOrder #orderLists .anorder li {
+  flex: auto;
+}
+#myOrder #orderLists .anorder .pp {
+  padding: 0.31rem 0.26rem 0.2rem;
+  margin-bottom: 0;
+}
+#myOrder #orderLists .anorder .pp dt {
+  font-weight: normal;
+}
+#myOrder #orderLists .anorder .pp dt,
+#myOrder #orderLists .anorder .pp dd {
+  line-height: 0.4rem;
+}
+#myOrder #orderLists .anorder .pp + ul {
+  padding: 0.2rem 0.26rem;
+}
+#myOrder #orderLists .anorder .pp + ul li:nth-child(2) {
+  margin: 0 0.04rem;
+}
+#myOrder #orderLists .anorder > li {
+  height: 100%;
+}
+#myOrder #orderLists .anorder > li:first-child {
+  padding: 0.26rem 0.27rem 0.61rem;
+}
+#myOrder #orderLists .anorder > li:first-child dl > dt {
+  margin-bottom: 0.4rem;
+}
+#myOrder #orderLists .anorder .character {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+#myOrder #orderLists .anorder .orderD {
+  font-size: 0.24rem;
+  color: #13b7f6;
+}
+#myOrder #orderLists .anorder .orderT {
+  font-size: 0.3rem;
+}
+#myOrder #orderLists .anorder .orderPrice {
+  font-size: 0.24rem;
+}
+#myOrder #orderLists .anorder .orderPrice span {
+  color: #ff5230;
+  font-size: 0.3rem;
+}
+#myOrder #orderLists .anorder .orderPrice span b {
+  padding-left: 0.16rem;
+  font-size: 0.2rem;
+  font-weight: normal;
+}
+#myOrder #orderLists .anorder .orderState {
+  font-size: 0.24rem;
+  color: #6e6e6e;
+}
+#myOrder #orderLists .anorder .btn-default {
+  color: #13b7f6;
+  width: 1.4rem;
+  height: 0.6rem;
+  padding: 0;
+  border-color: #13b7f6;
+}
+#myOrder #orderLists .anorder .payment,
+#myOrder #orderLists .anorder .confirm,
+#myOrder #orderLists .anorder .rebook {
+  color: #fff;
+  background-color: #ff5230;
+  border: none;
+}
+#myOrder #orderLists .anorder .confirm {
+  background-color: #90cd32;
+}
+#myOrder #orderLists .anorder .rebook {
+  background-color: #13b7f6;
+}
+#myOrder #orderLists .anorder .orderTag {
+  display: inline-block;
+  width: 76px;
+  height: 76px;
+  background: url(../img/orderTag.png) no-repeat;
+  background-size: 50% 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#myOrder .modalHref {
+  display: inline-block;
+  width: 2.3rem;
+  text-align: center;
+  padding: 0.2rem 0;
+  color: #007aff;
+}
+.contact div {
+  width: 100%;
+}
+.contact div a {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  padding: 0.2rem 0;
+}
+.ngdialog.ngdialog-theme-dadao .ngdialog-content {
+  background: #fff;
+  padding: 0;
+  width: 90%;
 }
