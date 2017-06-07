@@ -1,6 +1,6 @@
 ## jsds-mobile 静树大师上门理疗服务手机端下单项目
         项目是采取angularjs+express+mongodb+gulp的架构开发的，对于提高搭建前端框架的水平有很大的帮助
-        项目基本目录结构如下：
+        项目基本目录结构如下：
                 ├── node_modules // 打包过程中依赖的包
                 ├── package.json // 包含各种所需模块以及项目的配置信息
                 ├── gulpfile.js // 打包配置文件
