@@ -5,19 +5,19 @@
         <div class="writeMsg" ng-if="isExistServeMsg">
             <ul class="list-inline">
                 <li>服务时间:</li>
-                <li>2016/5/11 11:00-12:30</li>
+                <li>{{form.ordertime | date:'yyyy-MM-dd'}}</li>
             </ul>
             <ul class="list-inline">
                 <li>服务对象:</li>
-                <li>单月(先生)</li>
+                <li>{{form.name}}({{form.gender==0?'先生':'女士'}})</li>
             </ul>
             <ul class="list-inline">
                 <li>手机号码:</li>
-                <li>15889932045</li>
+                <li>{{form.phone}}</li>
             </ul>
             <ul class="list-inline">
                 <li>服务地址:</li>
-                <li>越秀区较场西路26号地王广场(英)</li>
+                <li>{{form.address}}</li>
             </ul>
         </div>
         <span class="next" ng-click="setMsg()"></span>
@@ -30,29 +30,23 @@
     <p class="fwjssex">服务技师性别<span>(系统将根据您的选择推荐最适合您的技师)</span></p>
     <div class="chooseMsg">
         <div class="jishiSex">
-            <label class="radio-inline">
-                <input type="radio" name="sex" id="man"/>男技师
-            </label>
-            <label class="radio-inline sexCheck">
-                <input type="radio" name="sex" id="nosex" checked="checked"/>不限
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="sex" id="woman"/>女技师
+            <label class="radio-inline" ng-class="{'true':'sexCheck'}[gender.active]" ng-repeat="gender in technicianGender" ng-click="selectTechnicianGender(gender)">
+                <input type="radio" name="sex" />{{gender.text}}
             </label>
         </div>
         <h5>您所选项目将由一位技师为您连续服务</h5>
         <table class="table">
             <tr>
                 <td>已选项目</td>
-                <td class="text-right"><a class="clearCart">清空购物车</a></td>
+                <td class="text-right"><a class="clearCart" ng-click="clearCart()">清空购物车</a></td>
             </tr>
-            <tr class="chooseProject">
-                <td>A套餐:健康足疗</td>
-                <td class="text-right">￥88/60分钟x1</td>
+            <tr class="chooseProject" ng-repeat="selectProduct in selectProducts" ng-if="selectProducts.length>0">
+                <td>A套餐:{{selectProduct.name}}</td>
+                <td class="text-right">￥{{selectProduct.newprice}}/{{selectProduct.period}}分钟x1</td>
             </tr>
-            <tr>
-                <td>已选择1项 总计: ￥88元</td>
-                <td class="text-right"><button type="button" id="pay">立即付款</button></td>
+            <tr ng-if="selectProducts.length>0">
+                <td>已选择{{selectProducts.length}}项 总计: ￥{{totalprice}}元</td>
+                <td class="text-right"><button type="button" id="pay" ng-click="pay()">立即付款</button></td>
             </tr>
         </table>
     </div>

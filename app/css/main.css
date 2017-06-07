@@ -327,6 +327,7 @@ label {
 }
 #main .showPrice .haveAdd {
   background-color: #aeaeae;
+  cursor: not-allowed;
 }
 /***********购物车******************/
 #myCart h4 {

@@ -1,9 +1,9 @@
 <div id="booking" ng-controller="bookingCtrl">
     <div id="headTitle">
-        <h5 class="text-center"><a href="cart.html" class="return">返回</a>预约下单</h5>
+        <h5 class="text-center"><a ui-sref="/cart" class="return">返回</a>预约下单</h5>
         <div class="text-center"><input type="text" id="orderTime" style="display: none"/></div>
     </div>
-    <form name="form">
+    <form name="userform" novalidate ng-submit="saveUserMsg(userform.$valid)">
         <div class="address input-group">
             <span class="input-group-addon">服务地址:</span>
             <input type="text" id="addr" placeholder="请输入您的服务地址" class="form-control text-right" ng-model="form.address" required/>
@@ -17,7 +17,7 @@
             <div class="input-group">
                 <span class="input-group-addon">用户性别:</span>
                 <label for="man" ng-class="{0:'sexSelected'}[gender]" ng-click="getSex(0)">
-                    <input type="radio" name="userSex" id="man" checked="checked"/>先生
+                    <input type="radio" name="userSex" id="man"/>先生
                 </label>
                 <label for="woman" ng-class="{1:'sexSelected'}[gender]" ng-click="getSex(1)">
                     <input type="radio" name="userSex" id="woman"/>女士
@@ -25,7 +25,7 @@
             </div>
             <div class="input-group">
                 <span class="input-group-addon">用户电话:</span>
-                <input type="text" id="phone" placeholder="请输入您的手机号" class="form-control text-right" ng-model="form.phone" required/>
+                <input type="text" id="phone" placeholder="请输入您的手机号" class="form-control text-right" ng-model="form.phone" required ng-pattern="/^1[34578]\d{9}$/"/>
             </div>
             <!--<div class="input-group">
                 <input type="text" id="smscode" class="form-control" placeholder="请输入验证码"/>
@@ -33,12 +33,12 @@
             </div>-->
         </div>
         <div class="read text-center">
-            <label class="sexCheck" ng-class="{'sexSelected':hasRead}" ng-click="test()">
+            <label class="sexCheck" ng-class="{'sexSelected':hasRead}">
                 <input type="radio"/>
             </label>
             我已阅读并同意 <a href="user_xieyi.html">《静树大师用户协议》《注意事项》</a>
         </div>
-        <input type="submit" class="btn btn-default text-center" ng-class="{'btn-disabled':form.$invalid}" ng-disabled="form.$invalid" value="提交信息"/>
+        <input type="submit" class="btn btn-default text-center" ng-class="{'btn-disabled':userform.$invalid}" ng-disabled="form.$invalid" value="提交信息"/>
     </form>
 
 </div>

@@ -1,0 +1,51 @@
+<div id="myOrder" ng-controller="orderCtrl">
+    <h4 class="text-center">我的订单</h4>
+    <div id="noOrder" class="text-center" style="margin:40% auto" ng-if="orderList.length<1">
+        <img src="img/null.png" alt=""/>
+        <p style="color:#484b4e;opacity: 0.5;margin-top: 32px">您当前没有订单</p>
+        <p><a href="project.html" style="text-decoration: underline;color:#13b7f6">去下单</a></p>
+    </div>
+    <div id="orderLists" ng-if="orderList.length>0">
+
+        <ul class="anorder list-inline" ng-repeat="order in orderList">
+            <li class="text-center" style="border-right:1px solid #eee;vertical-align: top">
+                <dl>
+                    <dt><img src="img/character.png" class="character"/></dt>
+                    <dd class="orderName">{{order.name}}</dd>
+                </dl>
+                <!--<i class="orderTag"></i>-->
+            </li>
+            <li style="width: 70%">
+                <dl class="text-left pp" style="border-bottom: 1px solid #eee">
+                    <dt ><span class="orderT">{{order.period}}</span><span style="float: right" class="orderD">{{order.orderdate}}</span></dt>
+                    <dd class="orderPrice" style="font-weight: bold">总价: <span><b>￥</b>{{order.totalprice}}</span></dd>
+                    <dd class="orderState">{{order.orderstate==0?'已成功预约，请尽快付款':(order.orderstate==1?'服务已结束，请确认订单':(order.orderstate==2?'订单已完成':''))}}</dd>
+                    <dd class="orderT"></dd>
+                </dl>
+                <ul class="list-inline">
+                    <!--<li><button type="button" class="btn-default btn orderDetail">订单详情</button></li>-->
+                    <li><button type="button" class="btn-default btn" ng-click="contact()">联系客服</button></li>
+                    <li><button type="button" class="btn btn-default" ng-class="{0:'payment',1:'confirm',2:'rebook'}[order.orderstate]">{{order.orderstate==0?'立即付款':(order.orderstate==1?'确认订单':(order.orderstate==2?'重新预约':''))}}</button></li>
+                </ul>
+            </li>
+
+        </ul>
+        <script type="text/ng-template" id="contact.html">
+            <div class="text-center contact">
+                <p>400-9650-196</p>
+                <p>是否拨号联系客服</p>
+                <div style="border-top:1px solid #eee" class="text-left">
+                    <a class="modalHref" style="border-right:1px solid #eee" ng-click="closeThisDialog()">取消</a>
+                    <a class="modalHref" href="tel:13580370252">确定</a>
+                </div>
+            </div>
+        </script>
+
+
+
+
+
+
+
+    </div>
+</div>
