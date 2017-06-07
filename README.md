@@ -8,7 +8,7 @@
                         ├── components // 自定义全局组件
                         ├── pages // 页面路由组件
                                 ├── product
-                                        ├── product.html 获取项目页面
+                                        ├── product.html 获取项目页面
                                         ├── product.js    执行获取项目方法
                                         └── product.less  项目样式
                                 ├── cart
@@ -22,7 +22,7 @@
                         ├── app.service.js // 公共函数
                         ├── index.html // 入口视图模板
                         └── index.less // 入口视图样式
-                 ├── server  // 后端文件
+                        ├── server  // 后端文件
                         ├── models  // 创建mongoose模型
                  ├── app.js  // 后端入口文件
                  └── vendor.config.js // 依赖的库配置文件（自定义）
