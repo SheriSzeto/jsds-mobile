@@ -5,7 +5,7 @@
                 ├── gulpfile.js // 打包配置文件
                 ├── app // 打包之后最终部署到服务器上的文件（名称自定义）
                 ├── src  // 资源文件（名称自定义）
-                >>├── components // 自定义全局组件
+                        ├── components // 自定义全局组件
         ├── pageloading （如：页面切换loading）
         ...
     ├── pages // 页面路由组件
