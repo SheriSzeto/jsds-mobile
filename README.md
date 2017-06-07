@@ -31,4 +31,12 @@
         2.在购物车中可以查看自己的项目，并且填写下单信息
         3.在我的订单可以登录查看自己的订单
         项目截图：
-        
+                1.选取服务项目
+                ![](https://github.com/SheriSzeto/jsds-mobile/tree/master/pics/1.png) 
+                2.查看购物车
+                ![](https://github.com/SheriSzeto/jsds-mobile/tree/master/pics/2.png)
+                3.用户登录
+                ![](https://github.com/SheriSzeto/jsds-mobile/tree/master/pics/3.png)
+                4.查看订单
+                ![](https://github.com/SheriSzeto/jsds-mobile/tree/master/pics/4.png)
+        
