@@ -1,5 +1,5 @@
-# jsds-mobile
-创建项目基本目录结构如下：
+## jsds-mobile 静树大师上门理疗服务手机端下单项目
+        创建项目基本目录结构如下：
 ├── node_modules // 打包过程中依赖的包
 ├── package.json // 包含各种所需模块以及项目的配置信息
 ├── gulpfile.js // 打包配置文件
